@@ -1,103 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Copa do Mundo</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <style>
+      body {
+        background-color: rgb(157, 217, 252);
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <h2 style="color: rgb(17, 97, 1); background-color: rgb(255, 230, 4)">
+        Copa do Mundo
+      </h2>
+      <form action="#">
+        <label for="nome" class="negrito">Nome do Torcedor:</label><br />
+        <input type="text" id="nome" name="nome" /><br /><br />
+
+        <label for="senha">Senha: </label><br />
+        <input type="password" id="senha" name="senha" /><br /><br />
+
+        <label for="mensagem">Digite uma mensagem de apoio à seleção: </label
+        ><br />
+        <textarea name="mensagem" id="mensagem" rows="13"></textarea><br />
+
+        <p>O Brasil vai ser campeão?</p>
+        <input type="radio" id="sim" name="brasil" value="Sim" />
+        <label for="sim">Sim</label>
+
+        <input type="radio" id="nao" name="brasil" value="Não" />
+        <label for="nao">Não</label>
+        <br />
+
+        <p>Selecione seus jogadores favoritos da seleção:</p>
+
+        <input type="checkbox" id="neymar" name="jogadores" value="neymar" />
+        <label for="neymar">Neymar</label>
+
+        <input
+          type="checkbox"
+          id="vinicius_junior"
+          name="jogadores"
+          value="vinicius_junior"
+        />
+        <label for="vinicius_junior">Vinícius Júnior</label>
+
+        <input
+          type="checkbox"
+          id="raphinha"
+          name="jogadores"
+          value="raphinha"
+        />
+        <label for="raphinha">Raphinha</label>
+
+        <input type="checkbox" id="endrick" name="jogadores" value="endrick" />
+        <label for="endrick">Endrick</label>
+        <br /><br />
+
+        <label for="jogos">Em qual país você gostaria de ver os jogos:</label
+        ><br />
+        <select name="jogos" id="jogos">
+          <option value="estados_unidos">Estados Unidos</option>
+          <option value="mexico">México</option>
+          <option value="canada">Canadá</option>
+        </select>
+        <br /><br />
+
+        <button type="submit" onclick="alert('Formulário Enviado!')">
+          Enviar
+        </button>
+      </form>
+    </section>
 
     <section>
-        <h2>Copa do Mundo</h2>
-        <form action="#">
-            <label for="nome">Nome do Torcedor:</label><br />
-            <input type="text" id="nome" name="nome" /><br /><br />
-
-            <label for="senha">Senha: </label><br>
-            <input type="password" id="senha" name="senha"><br /><br />
-
-            <label for="mensagem">Digite uma mensagem de apoio à seleção: </label><br>
-            <textarea name="mensagem" id="mensagem" rows="13"></textarea><br />
-
-            <p>O Brasil vai ser campeão?</p>
-            <input type="radio" id="sim" name="brasil" value="Sim" />
-            <label for="sim">Sim</label>
-            
-            <input type="radio" id="nao" name="brasil" value="Não" />
-            <label for="nao">Não</label>
-            <br />
-
-            <p>Selecione seus jogadores favoritos da seleção:</p>
-            
-            <input type="checkbox" id="neymar" name="jogadores" value="neymar" />
-            <label for="neymar">Neymar</label>
-            
-            <input type="checkbox" id="vinicius_junior" name="jogadores" value="vinicius_junior" />
-            <label for="vinicius_junior">Vinícius Júnior</label>
-            
-            <input type="checkbox" id="raphinha" name="jogadores" value="raphinha" />
-            <label for="raphinha">Raphinha</label>
-            
-            <input type="checkbox" id="endrick" name="jogadores" value="endrick" />
-            <label for="endrick">Endrick</label>
-            <br /><br />
-
-            <label for="jogos">Em qual país você gostaria de ver os jogos:</label><br>
-            <select name="jogos" id="jogos">
-                <option value="estados_unidos">Estados Unidos</option>
-                <option value="mexico">México</option>
-                <option value="canada">Canadá</option>
-            </select>
-            <br /><br />
-
-            <button type="submit" onclick="alert('Formulário Enviado!')">Enviar</button>
-        </form>
+      <h2>Histórico de Copas do Mundo</h2>
+      <table border="1" id="tabela">
+        <thead>
+          <tr>
+            <th>Ano</th>
+            <th>País sede</th>
+            <th>Campeão</th>
+            <th>Vice-campeão</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1958</td>
+            <td>Suécia</td>
+            <td>Brasil</td>
+            <td>Suécia</td>
+          </tr>
+          <tr>
+            <td>1970</td>
+            <td>México</td>
+            <td>Brasil</td>
+            <td>Itália</td>
+          </tr>
+          <tr>
+            <td>1994</td>
+            <td>Estados Unidos</td>
+            <td>Brasil</td>
+            <td>Itália</td>
+          </tr>
+          <tr>
+            <td>2002</td>
+            <td>Coreia do Sul / Japão</td>
+            <td>Brasil</td>
+            <td>Alemanha</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Catar</td>
+            <td>Argentina</td>
+            <td>França</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
-    
-    <section>
-        <h2>Histórico de Copas do Mundo</h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Ano</th>
-                    <th>País sede</th>
-                    <th>Campeão</th>
-                    <th>Vice-campeão</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1958</td>
-                    <td>Suécia</td>
-                    <td>Brasil</td>
-                    <td>Suécia</td>
-                </tr>
-                <tr>
-                    <td>1970</td>
-                    <td>México</td>
-                    <td>Brasil</td>
-                    <td>Itália</td>
-                </tr>
-                <tr>
-                    <td>1994</td>
-                    <td>Estados Unidos</td>
-                    <td>Brasil</td>
-                    <td>Itália</td>
-                </tr>
-                <tr>
-                    <td>2002</td>
-                    <td>Coreia do Sul / Japão</td>
-                    <td>Brasil</td>
-                    <td>Alemanha</td>
-                </tr>
-                <tr>
-                    <td>2022</td>
-                    <td>Catar</td>
-                    <td>Argentina</td>
-                    <td>França</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-</body>
+  </body>
 </html>
