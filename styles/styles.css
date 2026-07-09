@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --bright-show: #fafafa; 
+    --blue-slate: #545e75; 
+    --pitch-black: #100b00; 
+    --blush-rose: #c96480;
+    --deep-pink: #ff579f;
+}
+
+body {
+    font-family: "Quicksand", "Arial", sans-serif;
+}
+
 h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: purple;
+    color: var(--pitch-black);
 }
 
 #tabela {
