@@ -1,84 +1,138 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-  --bright-show: #fafafa;
-  --blue-slate: #555475;
-  --pitch-black: #100b00;
-  --blush-rose: #c96480;
-  --deep-pink: #ff579f;
+  --black: #000000;
+  --golden-sand: #D0D38F;
+  --willow-green: #95bf74;
+  --sage-green: #659b5e;
+  --fern: #556f44;
+  --frosted-mint: #DEFFEA;
+  --bright-snow: #fafafa;
+  --soft-linen: #D4DCCD;
 }
 
-header {
-    font-family: "Quicksand", "Arial", sans-serif;
-    background-color: var(--blue-slate);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Quicksand", "Arial", sans-serif;
-  background-color: var(#fafafa);
+  font-family: "Quicksand", Arial, sans-serif;
+  background-color: var(--frosted-mint);
+  color: var(--black);
+  line-height: 2;
 }
 
-footer {
-    font-family: "Quicksand", "Arial", sans-serif;
-    background-color: var(--blush-rose)
-}
-
-h1, h2,h3 {
-  font-family: "Climate+Crisis", "Arial Narrow", Arial, sans-serif;
-  font-size: 20;
-  font-weight: 200;
-  color: var(--pitch-black);
-}
-
-#tabela {
+header {
+  background-color: var(--sage-green);
+  padding: 60px 20px;
   text-align: center;
+  border: 4px solid var(--black);
+  margin: 20px;
+  border-radius: 4px;
 }
 
-.negrito {
-  font-weight: bold;
+header h1 {
+  font-family: "Press start 2P", monospace;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
-img {
-  height: 200px;
-  width: 200px;
+header p {
+  font-family: "Quantico", sans-serif; 
+  font-size: 25px;
+  color: var(--bright-snow);
 }
 
-.avatar {
-  border-radius: 50%;
+nav {
+  background-color: var(--fern);
+  margin: 0 20px 30px 20px;
+  border: 4px solid var(--black);
+  border-radius: 4px;
 }
 
-#nav-sections {
-    margin-top: 15px;
-}
-
-
-#nav-sections ul {
+nav ul {
   list-style-type: none;
+  display: flex; /* Deixa na horizontal */
+  justify-content: center; /* Centraliza os links */
 }
 
-#nav-sections li {
-  display: inline-block;
+nav li {
+  /* Remove margens extras para os botões encostarem */
 }
 
-
-
-#nav-links {
-  ul {
-    list-style-type: none;
-  }
-  li {
-    display: inline-block;
-  }
-}
-
-a {
-  text-decoration: none;
+nav a {
+  display: block;
+  font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  color: var(--pitch-black);
+  font-size: 16px;
+  color: var(--bright-snow);
+  text-decoration: none;
+  padding: 15px 30px;
+  transition: all 0.2s ease;
 }
 
-a:hover {
-  color: var(--blue-slate);
-  box-shadow: 0 0 10px var(--deep-pink);
-}               
+/* HOVER: Quando passa o mouse, fica com o fundinho quadrado */
+nav a:hover {
+  background-color: var(--sage-green); /* Cria o bloco de cor de destaque */
+  color: var(--black);
+}
+
+/* 6. CONTEÚDO CENTRALIZADO E SEÇÕES */
+section {
+  max-width: 800px; /* Limita a largura para ficar bonito no centro */
+  margin: 0 auto 40px auto; /* Centraliza a seção inteira na tela */
+  padding: 0 20px;
+  text-align: center; /* Centraliza os textos e os elementos de programação */
+}
+
+/* Estilo do título das seções */
+h2.titulo-secao, #inicio h2, #contato h2 {
+  font-family: "Press Start 2P", sans-serif; /* Mantendo a vibe tecnológica */
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+/* 7. CARDS DE PROGRAMAÇÃO (Alinhados no centro) */
+.card-programa {
+  background-color: var(--bright-snow); /* Fundo claro para excelente leitura */
+  border: 3px solid var(--black);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px auto; /* Centraliza os cards */
+  max-width: 500px; /* Largura controlada para não espalhar demais na tela */
+  text-align: left; /* Alinha o texto interno à esquerda para leitura natural */
+  box-shadow: 4px 4px 0px var(--black); /* Sombra estilo retro/quadradão */
+}
+
+.card-programa h3 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  color: var(--fern);
+  margin-bottom: 10px;
+}
+
+.card-programa p {
+  font-size: 15px;
+  color: #333;
+}
+
+/* 8. RODAPÉ (Soft-Linen) */
+footer {
+  background-color: var(--soft-linen);
+  color: var(--black);
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 4px solid var(--black);
+  margin-top: 60px;
+}
