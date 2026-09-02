@@ -1,55 +1,55 @@
-print ("\n--- Bem vindo ao hotel Costa Branca ---")
+# lava - jato
 
-nome = input("Digite seu nome:")
-idade = int(input("Digite sua idade:"))
-dias = int(input("Quantos dias você vai ficar no hotel? "))
-responsavel = input("Está acompanhado de um responsável? (sim/não): ").lower()
-vip = input("Você é cliente VIP? (sim/não): ").lower()
-aceitou_regras = input("Você aceita as regras do hotel? (sim/não): ").lower()
+nome = input("Digite o nome do cliente: ")
 
-if responsavel == "sim":
-    tem_reponsavel = True
-else:  
-    tem_reponsavel = False
+print("\nTipos de lavagens disponíveis:")
+print("1 - Simples     (R$ 30,00)")
+print("2 - Completa    (R$ 50,00)")
+print("3 - Especial    (R$ 80,00)")
 
-if vip == "sim":
-    cliente_vip = True
-else:  
-    cliente_vip = False
+tipo = input("Escolha o tipo de lavagem: ")
+quantidade = int(input("Digite quantos carros serão lavados: "))
 
-if aceitou_regras == "sim":
-    aceitou = True
+match tipo:
+    case "1" | "Simples":
+        custo = 30.0
+        tipo_nome = "Simples"
+
+    case "2" | "Completa":
+        custo = 50.0
+        tipo_nome = "Completa"
+
+    case "3" | "Especial":
+        custo = 80.0
+        tipo_nome = "Especial"
+
+    case _:
+        print("\nOpção inválida, definindo taxa como R$ 0.00 por padrão.")
+        custo = 0.0
+        tipo_nome = "Inválido"
+
+subtotal = custo * quantidade
+
+if quantidade >= 3:
+    desconto = subtotal * 0.15
 else:
-    aceitou = False
+    desconto = 0.0
 
-#REGRA 1: Concordar com as regras do hotel
-#NOT
+valor_final = subtotal - desconto
 
-if not aceitou:
-    print ("Reserva cancelada!")
-    print ("Motivo: não aceitou as regras do hotel")
-
-#REGRA 2: menores de 18 precisam de um responsável
-#AND = NOT
-elif idade < 18 and not tem_reponsavel:
-    print ("Reserva cancelada!")
-    print ("Motivo: menores de 18 precisam de um responsável")
-
+if valor_final <= 50:
+    lavagem = "Básica"
+elif valor_final <= 120:
+    lavagem = "Intermediária"
 else:
-    print ("Reserva aceita!")
+    lavagem = "Premium"
 
-#REGRA 3: três ou mais diárias OU vip = café da manhã
-#OR
 
-if dias >= 3 or cliente_vip:
-    print ("Café da manhã incluso!")
-else:
-    print ("Reserva aceita sem café da manhã incluso")
-
-#REGRA 4: sete ou mais dias E ser vip = quarto melhor
-#AND
-
-if dias >= 7 and cliente_vip:
-    print ("Parabéns! Upgrade de quarto liberado")
-else:
-    print ("Quarto padão reservado!")
+print("Conferindo os dados")
+print(f"Nome do cliente: {nome}")
+print(f"Tipo de lavagem: {tipo_nome}")
+print(f"Quantidade de carros: {quantidade}")
+print(f"Subtotal: {subtotal:.2f}")
+print(f"Desconto: {desconto:.2f}")
+print(f"Valor final: {valor_final:.2f}")
+print(f"Classificação: {lavagem}")
