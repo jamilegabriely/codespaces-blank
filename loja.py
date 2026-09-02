@@ -37,9 +37,9 @@ else:
 
 valor_final = subtotal - desconto
 
-print("Conferindo dados")
-print(f"Nome do produto: {nome}")
-print(f"Categoria: {tipo_nome}")
+print("Conferindo dados do guerreiro")
+print(f"Nome do héroi: {nome}")
+print(f"Classe escolhida: {tipo_nome}")
 print(f"Quantidade: {quantidade}")
 print(f"Subtotal: {subtotal:.2f}")
 print(f"Desconto: {desconto:.2f}")
